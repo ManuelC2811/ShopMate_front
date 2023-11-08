@@ -1,0 +1,47 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Registrarse</h1>
+    
+</div>
+
+<div>
+    <ul>
+        <p>La contraseña debe contener al menos: <br></p>
+        
+        <li>
+            Un caracter especial '@#!$&'
+        </li>
+        <li>
+            Un número
+        </li>
+        <li>
+            Una letra mayúscula
+        </li>
+        <li>
+            Un mínimo de 10 caracteres
+        </li>
+    </ul>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+        <input style="margin-top:10px ;" class="button" type="submit" value="Registrarse">
+    </form>
+    <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión</a></p>
+</div>
+
+
+
+
+{% endblock content %}
