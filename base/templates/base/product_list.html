@@ -36,9 +36,9 @@
         <div class="product-title">
             {% if product.comprado %}
             <div class="product-complete-icon"></div>
-            <s><a href="{% url 'product-update' product.id %}">{{product}}  ${{product.precio}}  {{product.cantidad}}</a></s> {% else %}
+            <s><a href="{% url 'product-update' product.id %}">{{product}}  ${{product.precio}}  {{product.cantidad}} {{product.unidad}}</a></s> {% else %}
             <div class="product-incomplete-icon"></div>
-            <a href="{% url 'product-update' product.id %}">{{product}}  ${{product.precio}}  {{product.cantidad}}</a> {% endif %}
+            <a href="{% url 'product-update' product.id %}">{{product}}  ${{product.precio}}  {{product.cantidad}} {{product.unidad}}</a> {% endif %}
         </div>
         <div class="product-controls">
             <a class="delete-link" href="{% url 'product-delete' product.id %}">&#215;</a>

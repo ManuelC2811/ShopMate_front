@@ -17,6 +17,11 @@ from django.db import transaction
 from .models import Product
 from .forms import PositionForm
 
+from django.shortcuts import render, redirect
+from django.contrib.auth import login
+from .forms import CustomUserCreationForm 
+
+
 
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
@@ -29,7 +34,7 @@ class CustomLoginView(LoginView):
 
 class RegisterPage(FormView):
     template_name = 'base/register.html'
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm  # Utiliza el nuevo formulario personalizado
     redirect_authenticated_user = True
     success_url = reverse_lazy('products')
 

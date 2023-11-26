@@ -8,7 +8,7 @@
 
 <div>
     <ul>
-        <p>La contraseña debe contener al menos: <br></p>
+        <p>La contraseña debe contener: <br></p>
         
         <li>
             Un caracter especial '@#!$&'
@@ -30,6 +30,9 @@
         {% csrf_token %}
         <label>{{form.username.label}}</label>
         {{form.username}}
+        
+        <label>{{form.email.label}}</label>
+        {{form.email}}
 
         <label>{{form.password1.label}}</label>
         {{form.password1}}
