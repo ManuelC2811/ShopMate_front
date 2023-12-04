@@ -123,11 +123,11 @@ LOGIN_URL = 'login'
 
 STATIC_URL = 'static/'
 
-# SMTP Configuration
+# SMTP Confuguración
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'correo@gmail.com'
-EMAIL_HOST_PASSWORD = 'contraseña'
+EMAIL_HOST_USER = 'mcastiblancoa@unal.edu.co'
+EMAIL_HOST_PASSWORD = 'Aa6619437'

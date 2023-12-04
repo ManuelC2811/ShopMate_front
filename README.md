@@ -50,3 +50,5 @@ Ejecuta el siguiente comando para iniciar el servidor de desarrollo
 ```bash
 python manage.py runserver
 ```
+
+Para habilitar la funcionalidad de recuperar contraseña, sólo será necesario modificar los atributos 'SMTP Configuración' del archivo 'setting.py' dentro de la carpeta 'shopmate', localizados al final.
